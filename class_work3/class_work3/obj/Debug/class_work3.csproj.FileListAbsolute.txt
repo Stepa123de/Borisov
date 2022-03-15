@@ -1,0 +1,10 @@
+C:\Users\Стёпа\source\repos\class_work3\class_work3\obj\Debug\class_work3.csproj.AssemblyReference.cache
+C:\Users\Стёпа\source\repos\class_work3\class_work3\obj\Debug\class_work3.Form1.resources
+C:\Users\Стёпа\source\repos\class_work3\class_work3\obj\Debug\class_work3.Properties.Resources.resources
+C:\Users\Стёпа\source\repos\class_work3\class_work3\obj\Debug\class_work3.csproj.GenerateResource.cache
+C:\Users\Стёпа\source\repos\class_work3\class_work3\obj\Debug\class_work3.csproj.CoreCompileInputs.cache
+C:\Users\Стёпа\source\repos\class_work3\class_work3\bin\Debug\class_work3.exe.config
+C:\Users\Стёпа\source\repos\class_work3\class_work3\bin\Debug\class_work3.exe
+C:\Users\Стёпа\source\repos\class_work3\class_work3\bin\Debug\class_work3.pdb
+C:\Users\Стёпа\source\repos\class_work3\class_work3\obj\Debug\class_work3.exe
+C:\Users\Стёпа\source\repos\class_work3\class_work3\obj\Debug\class_work3.pdb
