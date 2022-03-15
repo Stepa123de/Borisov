@@ -8,3 +8,13 @@ C:\Users\Стёпа\source\repos\class_work3\class_work3\bin\Debug\class_work3.e
 C:\Users\Стёпа\source\repos\class_work3\class_work3\bin\Debug\class_work3.pdb
 C:\Users\Стёпа\source\repos\class_work3\class_work3\obj\Debug\class_work3.exe
 C:\Users\Стёпа\source\repos\class_work3\class_work3\obj\Debug\class_work3.pdb
+D:\Git\Borisov\class_work3\class_work3\bin\Debug\class_work3.exe.config
+D:\Git\Borisov\class_work3\class_work3\bin\Debug\class_work3.exe
+D:\Git\Borisov\class_work3\class_work3\bin\Debug\class_work3.pdb
+D:\Git\Borisov\class_work3\class_work3\obj\Debug\class_work3.csproj.AssemblyReference.cache
+D:\Git\Borisov\class_work3\class_work3\obj\Debug\class_work3.Form1.resources
+D:\Git\Borisov\class_work3\class_work3\obj\Debug\class_work3.Properties.Resources.resources
+D:\Git\Borisov\class_work3\class_work3\obj\Debug\class_work3.csproj.GenerateResource.cache
+D:\Git\Borisov\class_work3\class_work3\obj\Debug\class_work3.csproj.CoreCompileInputs.cache
+D:\Git\Borisov\class_work3\class_work3\obj\Debug\class_work3.exe
+D:\Git\Borisov\class_work3\class_work3\obj\Debug\class_work3.pdb

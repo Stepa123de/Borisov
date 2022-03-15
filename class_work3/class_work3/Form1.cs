@@ -38,10 +38,21 @@ namespace class_work3
             {
                 int x = _genran.Next(this.ClientSize.Width - _StripeWidth);
                 int y = _genran.Next(this.ClientSize.Height - _StripeHight);
-                _mystripe = new stripe(x, y, _StripeWidth, _StripeHight);
+                int flag = _genran.Next(2);
+
+                if (flag == 0)
+                {
+                    _mystripe = new stripe(x, y, _StripeWidth, _StripeHight);
+                }
+                else 
+                {
+                    _mystripe = new stripe(x, y, _StripeHight, _StripeWidth);
+                }
+               
                 int r = _genran.Next(256);
                 int g = _genran.Next(256);
                 int b = _genran.Next(256);
+                
 
                 _mystripe.SetColor(Color.FromArgb(r, g, b));
 
