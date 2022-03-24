@@ -10,8 +10,9 @@ namespace class_work3
         private stripe _mystripe;
         private Random _genran;
         private const int _StripeWidth = 100, _StripeHight = 25;
-        List<stripe> _allStrips;
-        private int _interval = 1000, _basestripe = 10;
+        private List<stripe> _allStrips;
+        private int _interval = 2000, _basestripe = 10, _lvl = 1;
+        private String FormText = "Start";
         public Form1()
         {
             InitializeComponent();
@@ -19,9 +20,36 @@ namespace class_work3
             _allStrips = new List<stripe>();
             _genran = new Random();
 
+            MainButton("Play",75);
+            
+        }
+
+        private void MainButton(string text,int fontSize)
+        {
+            int myWidth = 300,myHeight = 100;
+            Button btn = new Button();
+            btn.Size = new Size(300, 120);
+            btn.Location = new Point((this.ClientSize.Width - myWidth) / 2, (this.ClientSize.Height - myHeight) / 2);
+            btn.Click += MainButtonClick;
+            btn.Text = text;
+            btn.Font = new Font("arial", fontSize);
+            btn.TextAlign = ContentAlignment.MiddleCenter;
+            this.Controls.Add(btn);
+        }
+
+        private void MainButtonClick(object sender, EventArgs e)
+        {
+            Button btn = (Button)sender;
+            this.Controls.Remove(btn);
+            GameStart();
+        }
+
+        private void GameStart() 
+        {
             AddStripes(_basestripe);
             timer1.Interval = _interval;
             timer1.Start();
+            FormText = "Level " + _lvl;
         }
 
         private void AddStripes(int v)
@@ -91,38 +119,52 @@ namespace class_work3
             }
         }
 
-        private void end() 
-        {
-            timer1.Stop();
-            TextBox text1 = new TextBox();
-            text1.Text = "You Win!!!";
-            text1.PointToClient(new Point(0,0));
-            text1.Size = ClientSize;
-            text1.AutoSize = false;
-            text1.Font = new Font(text1.Font.Name, 99, text1.Font.Style, text1.Font.Unit);
-            this.Controls.Add(text1);
-            text1.Show();
-        }
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (_allStrips.Count == 0) 
+            if (_allStrips.Count == 0)
             {
-                AddStripes(_basestripe);
-                _interval = (int)(_interval * 0.8);
-                timer1.Interval = _interval;
-
-                if (_interval < 600) 
+                if (_lvl == 1)
                 {
-                    end();
+                    AddStripes(10);
+                    timer1.Interval = 1500;
+                    _lvl++;
+                    FormText = "Level " + _lvl;
                 }
+                else if (_lvl == 2)
+                {
+                    AddStripes(10);
+                    timer1.Interval = 1100;
+                    _lvl++;
+                    FormText = "Level " + _lvl;
+                }
+                else if (_lvl == 3)
+                {
+                    AddStripes(10);
+                    timer1.Interval = 700;
+                    _lvl++;
+                    FormText = "Level " + _lvl;
+                }
+                else
+                {
+                    _lvl = 1;
+                    timer1.Stop();
+                    MainButton("You Win!", 42);
+                    FormText = "Replay";
+                }
+            }
+            else if(_allStrips.Count == 30)
+            {
+                _allStrips = new List<stripe>();
+                timer1.Stop();
+                MainButton("You Lose!",42);
+                FormText = "Replay ";
             }
             else 
             {
-                AddStripes(1);
-                
+                AddStripes(1); 
             }
-            Invalidate();
 
+            Invalidate();
         }
 
         private void Form1_Paint(object sender, PaintEventArgs e)
@@ -130,6 +172,8 @@ namespace class_work3
             Graphics g = this.CreateGraphics();
 
             foreach (stripe x in _allStrips) x.Draw(g);
+
+            Text = FormText;
 
         }
     }
